@@ -1,0 +1,64 @@
+﻿<Window x:Class="_20QuestionsDataCollection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="20 Questions Data Collection" Height="286" Width="698">
+    <StackPanel Margin="5">
+        <TextBlock Name="txtThing" TextWrapping="Wrap" Text="Finished!" FontWeight="Bold" FontSize="20" Margin="10,0,0,5"/>
+        <TextBlock Name="txtQuestion" TextWrapping="Wrap" Text="All questions have been answered for all things!" Margin="10,0,0,10"/>
+        <Grid Height="40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Content="2%" Grid.Column="0" Tag="2" Click="Percentage_Click"/>
+            <Button Content="5%" Grid.Column="1" Tag="5" Click="Percentage_Click" />
+            <Button Content="10%" Grid.Column="2" Tag="10" Click="Percentage_Click" />
+            <Button Content="15%" Grid.Column="3" Tag="15" Click="Percentage_Click" />
+            <Button Content="20%" Grid.Column="4" Tag="20" Click="Percentage_Click" />
+            <Button Content="30%" Grid.Column="5" Tag="30" Click="Percentage_Click" />
+            <Button Content="40%" Grid.Column="6" Tag="40" Click="Percentage_Click" />
+            <Button Content="50%" Grid.Column="7" Tag="50" Click="Percentage_Click" />
+            <Button Content="60%" Grid.Column="8" Tag="60" Click="Percentage_Click" />
+            <Button Content="70%" Grid.Column="9" Tag="70" Click="Percentage_Click" />
+            <Button Content="80%" Grid.Column="10" Tag="80" Click="Percentage_Click" />
+            <Button Content="85%" Grid.Column="11" Tag="85" Click="Percentage_Click" />
+            <Button Content="90%" Grid.Column="12" Tag="90" Click="Percentage_Click" />
+            <Button Content="95%" Grid.Column="13" Tag="95" Click="Percentage_Click" />
+            <Button Content="98%" Grid.Column="14" Tag="98" Click="Percentage_Click" />
+        </Grid>
+        <TextBlock TextWrapping="Wrap" Text="New Question:" Margin="0,10,0,0"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtNewQuestion" Height="30" Margin="5" VerticalContentAlignment="Center" KeyDown="txtNewQuestion_KeyDown" />
+            <Button x:Name="btnNewQuestion" Content="Add" Grid.Column="1" Margin="5" Click="btnNewQuestion_Click" />
+        </Grid>
+        <TextBlock TextWrapping="Wrap" Text="New Thing:" Margin="0,10,0,0"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtNewThing" Height="30" Margin="5" VerticalContentAlignment="Center" KeyDown="txtNewThing_KeyDown" />
+            <Button x:Name="btnNewThing" Content="Add" Grid.Column="1" Margin="5" Click="btnNewThing_Click" />
+        </Grid>
+
+    </StackPanel>
+</Window>
